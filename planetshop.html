@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planet Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    body {
+      font-family: "DM Serif Text", serif;
+      background-color: #0a0a0a;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid black;
+    }
+
+    .logo img {
+      height: 110px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      padding: 8px 16px;
+      border: 2px solid white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .sign {
+      background-color: white;
+      color: black;
+    }
+
+    .sign:hover {
+      background-color: black;
+      color: white;
+    }
+
+    main {
+      position: relative;
+      padding: 100px 40px;
+      background: url('https://images.unsplash.com/photo-1583337130417-3346a1f6f916?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 0;
+    }
+
+    .planet-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 100px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .planet-section h2 {
+      font-size: 36px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #66fcf1;
+    }
+
+    .planet-section p {
+      font-size: 16px;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    .planet-section img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: black;
+      color: gray;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .planet-section {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .planet-section img {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .planet-section p {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="log.png" alt="Planet Shop Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#buy">Buy Now</a></li>
+        <li><a href="#sell">Sell Now</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#" class="sign">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Mercury -->
+    <section class="planet-section">
+      <h2>Mercury</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercury">
+      <div>
+        <p>Mercury is the smallest planet and closest to the Sun. It has no atmosphere and extreme temperatures, making it ideal for solar purists seeking raw cosmic exposure.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- Venus -->
+    <section class="planet-section">
+      <h2>Venus</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus">
+      <div>
+        <p>Venus, often called Earth's twin, is cloaked in clouds of sulfuric acid and has a blazing hot surface. A bright gem in the sky, ideal for those who love extremes.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- Mars -->
+    <section class="planet-section">
+      <h2>Mars</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Mars">
+      <div>
+        <p>Mars is dry, cold, and dusty, yet full of opportunity. With the largest volcano and deepest canyon, it's perfect for exploration and future settlements.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- Jupiter -->
+    <section class="planet-section">
+      <h2>Jupiter</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Jupiter">
+      <div>
+        <p>Jupiter is a gas giant with a legendary red storm and dozens of moons. It's a planet of grandeur, scale, and swirling storms — for true collectors.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+
+    <!-- Saturn -->
+    <section class="planet-section">
+      <h2>Saturn</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturn">
+      <div>
+        <p>Known for its dazzling rings, Saturn is elegant and expansive. If you're drawn to cosmic beauty and iconic aesthetics, Saturn is your dream buy.</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Planet Shop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
